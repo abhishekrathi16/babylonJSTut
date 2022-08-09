@@ -17,6 +17,27 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babylonjs/core@^5.18.0":
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.18.0.tgz#9d4632ec057e59d8f98af92cd975d3811e5b4c02"
+  integrity sha512-nt+drqsyDrpV4guRnt1gruNLgHh2mWMZFH3LzYQIQm5MP6cgJW/XUbKpT0TvZ16jAP1Qvg0qUXX3lmt582I9kw==
+  dependencies:
+    tslib "^2.4.0"
+
+"@babylonjs/gui@^5.18.0":
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-5.18.0.tgz#f3cc3719d7cfaf7bcd579a256ab858aebf624bb4"
+  integrity sha512-ZtPk8fJjLVo0JPuLajezvORW7Dv7+6NwP+fb3f+u8KwTMzvxY0RUwPYjPdUCdntsx6U12y+2UN+MwALpPshpVA==
+  dependencies:
+    tslib "^2.4.0"
+
+"@babylonjs/loaders@^5.18.0":
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.18.0.tgz#c372809bb8aa4930ae6a30c5ae712217b50b224e"
+  integrity sha512-YbfkPr2wvbsof4Ud9gibAjUSXkhF0vxvpo+fkes7swnWFB9SVNR2oD+J0xEKPtVzVSXt4sle0xSgUbwBvjXjOw==
+  dependencies:
+    tslib "^2.4.0"
+
 "@eslint/eslintrc@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.3.0.tgz#29f92c30bb3e771e4a2048c95fa6855392dfac4f"
@@ -1688,6 +1709,13 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
+react-babylonjs@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-3.1.6.tgz#2dce73c7bb1d45a5405f2d139151533ce7207f65"
+  integrity sha512-sa74Jr7oCKjvygQZKD/E0GsAXXcp8m7uupdm4qckbA5UW0zp/faBoBHV+X8hlqagD3JjBVyxI/jhrhsY3xHBNw==
+  dependencies:
+    react-reconciler "^0.26.2"
+
 react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
@@ -1700,6 +1728,15 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-reconciler@^0.26.2:
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.26.2.tgz#bbad0e2d1309423f76cf3c3309ac6c96e05e9d91"
+  integrity sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.2"
 
 react@18.2.0:
   version "18.2.0"
@@ -1782,6 +1819,14 @@ run-parallel@^1.1.9:
   integrity sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==
   dependencies:
     queue-microtask "^1.2.2"
+
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 scheduler@^0.23.0:
   version "0.23.0"
