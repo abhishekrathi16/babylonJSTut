@@ -13,8 +13,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "types": [
+    "babylonjs",
+    "anotherAwesomeDependency"
+  ],
   "exclude": ["node_modules"]
 }
