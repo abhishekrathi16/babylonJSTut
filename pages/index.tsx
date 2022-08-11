@@ -3,17 +3,23 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useStore from '../store/store'
+import Wave from "../components/elements/Wave"
+import 'twin.macro'
 
-const Home: NextPage = () => {
-  //still learning Zustand with TypeScript
-  const color = useStore((state)=>state.color)
-  const changeColor = useStore((state)=>state.changeColor)
+export default function Home(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <div onClick={changeColor} className="iconBox">..reset code..</div>
-      <h1>{color}</h1>
+    <div>
+      <Head>
+        <title>
+          Test
+        </title>
+        <link rel="icon" href='/favicon.ico'/>
+      </Head>
+      <main>
+        <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Wave</h1>
+        <Wave/>
+      </main>
     </div>
   )
 }
 
-export default Home
