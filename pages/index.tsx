@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useStore from '../store/store'
 import Wave from "../components/elements/Wave"
+import Project from "../components/elements/Project"
 import 'twin.macro'
 
 export default function Home(): JSX.Element {
@@ -17,7 +18,8 @@ export default function Home(): JSX.Element {
       </Head>
       <main>
         <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Wave</h1>
-        <Wave/>
+        <Project/>
+        {/* <Wave/> */}
       </main>
     </div>
   )

@@ -121,7 +121,6 @@ const config = {
               beta={Math.PI / 2 + 0.15}
               radius={minZ}
             />
-  
             <hemisphericLight name="light1" intensity={1} direction={Vector3.Up()} />
             <WithAnimation />
           </Scene>
