@@ -106,6 +106,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@babylonjs/materials@^5.19.0":
+  version "5.19.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-5.19.0.tgz#a1e256e25c6c8e21b7db312002056cb0a97e0455"
+  integrity sha512-D82D0LMTEMVKzAWf/XxzL6Wm+1BBGLZafQuhzFjr04Xv3O78Wxkut+ncGqtD9M8outy0Nt9qJcJSh1e6hfXwgA==
+  dependencies:
+    tslib "^2.4.0"
+
 "@emotion/babel-plugin@^11.10.0":
   version "11.10.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.0.tgz#ae545b8faa6b42d3a50ec86b70b758296f3c4467"
@@ -753,6 +760,11 @@ babel-plugin-macros@^3.1.0:
     "@babel/runtime" "^7.12.5"
     cosmiconfig "^7.0.0"
     resolve "^1.19.0"
+
+babylonjs-hook@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/babylonjs-hook/-/babylonjs-hook-0.1.1.tgz#9c1acc0fbe346b51f2c0a24cf5dbaf42aeb4e5a0"
+  integrity sha512-uLcaX08NJy/1DeI+3GNQWQ2lQazhCR4U4jC6V+xy9rEvCCeFml3EWlwEwZv+8+oSHnMMV761jeQGjn9dVzgfMQ==
 
 balanced-match@^1.0.0:
   version "1.0.2"
