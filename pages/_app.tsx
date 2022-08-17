@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Global
       styles={css`
       #wave-canvas{
-        width: 700px;
-        height: 700px;
+        width: 400px;
+        height: 400px;
       }
       `}
       />
