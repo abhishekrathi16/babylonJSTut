@@ -56,12 +56,12 @@ export const Navbar = () => {
                 Home
               </a>
             </Link>
-            <Link href='/Wave'>
+            <Link href='/Cubes'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
                 Cubes
               </a>
             </Link>
-            <Link href='/Cubes'>
+            <Link href='/Wave'>
               <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
                 Waves
               </a>

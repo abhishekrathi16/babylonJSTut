@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
     <div>
       <Head>
         <title>
-          Test
+          Intro to BabylonJS
         </title>
         <link rel="icon" href='/favicon.ico'/>
       </Head>
