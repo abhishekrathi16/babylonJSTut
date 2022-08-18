@@ -109,8 +109,11 @@ const config = {
   
   const Wave = () => {
     const minZ = -((config.amount.z * config.separation) / 2)
-  
     return (
+      <>
+      <main>
+        <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Wave</h1>
+      </main>
       <div css={[tw`flex-auto`]}>
         <Engine antialias adaptToDeviceRatio canvasId="wave-canvas">
           <Scene>
@@ -126,6 +129,7 @@ const config = {
           </Scene>
         </Engine>
       </div>
+      </>
     )
   }
   

@@ -1,10 +1,5 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import useStore from '../store/store'
-import Wave from "../components/elements/Wave"
-import Project from "../components/elements/Project"
+import { Navbar } from '../components/Navbar'
 import 'twin.macro'
 
 export default function Home(): JSX.Element {
@@ -17,9 +12,12 @@ export default function Home(): JSX.Element {
         <link rel="icon" href='/favicon.ico'/>
       </Head>
       <main>
-        <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Wave</h1>
-        <Project/>
-        {/* <Wave/> */}
+        <Navbar/>
+        <div className='flex items-center justify-center flex-col font-bold mt-32'>
+          <div>Welcome To My Project!!</div>
+          <div>Please go to Cubes for a set of beautiful spinning cubes and to Waves for a sight of flowing waves.</div>
+          <div>Redirect using back button on browser tab.</div>
+        </div>
       </main>
     </div>
   )

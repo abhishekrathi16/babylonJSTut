@@ -20,7 +20,7 @@ import {
 import tw from "twin.macro";
 import { FresnelParameters } from "@babylonjs/core/Materials/fresnelParameters";
 import { useBeforeRender } from "react-babylonjs";
-import useStore from "../../store/store";
+import useStore from "../store/store";
 
 const config = {
   amount: { x: 50, z: 50 },
@@ -125,12 +125,17 @@ const dimensions = [
   { id: 27, x: 5, y: 5, z: 5, color: Color3.FromHexString("#c80a0f") },
 ];
 
-const Project = () => {
+const Cubes = () => {
   const store = useStore();
   const minZ = -((config.amount.z * config.separation) / 2);
   const [height, setHeight] = useState(4)
+  const [width, setWidth] = useState(0)
+  const [depth, setDepth] = useState(0)
   return (
     <>
+    <main>
+        <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Cubes</h1>
+      </main>
       <div css={[tw`flex-auto`]}>
         <Engine antialias adaptToDeviceRatio canvasId="cube-canvas">
           <Scene clearColor={new Color4(0.2, 0.4, 0.75, 1.0)}>
@@ -191,17 +196,47 @@ const Project = () => {
               Height
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
+              className="shadow appearance-none border rounded w-100 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="height"
               type="number"
               placeholder="Height"
-              onChange={(e:any)=>store.changeHeight(e.target.value)}
+              value={height}
+              onChange={(e)=>{setHeight(e.target.valueAsNumber)}}
+            />
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="width"
+            >
+              Width
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-100 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="width"
+              type="number"
+              placeholder="Width"
+              value={width}
+              onChange={(e)=>{setWidth(e.target.valueAsNumber)}}
+            />
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="depth"
+            >
+              Depth
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-100 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="depth"
+              type="number"
+              placeholder="Depth"
+              value={depth}
+              onChange={(e)=>{setDepth(e.target.valueAsNumber)}}
             />
           </div>
         </form>
+        <div>{height}</div>
       </div>
     </>
   );
 };
 
-export default Project;
+export default Cubes;
