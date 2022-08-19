@@ -7,6 +7,7 @@ import {
   Texture,
   StandardMaterial,
   Color4,
+  StoreOp,
 } from "@babylonjs/core";
 import React, { useEffect, useState, useRef } from "react";
 import {
@@ -36,6 +37,9 @@ type cubeProps = {
   name: string;
   position: Vector3;
   color: Color3;
+  height: number;
+  width: number;
+  depth: number;
 };
 
 const Cube = (props: cubeProps) => {
@@ -54,9 +58,9 @@ const Cube = (props: cubeProps) => {
       name={props.name}
       ref={cubeRef}
       //   size={4}
-      width={4}
-      height={4}
-      depth={4}
+      width={props.height}
+      height={props.width}
+      depth={props.depth}
       position={props.position}
       topBaseAt={2}
       bottomBaseAt={3}
@@ -128,12 +132,12 @@ const dimensions = [
 const Cubes = () => {
   const store = useStore();
   const minZ = -((config.amount.z * config.separation) / 2);
-  const [height, setHeight] = useState(4)
-  const [width, setWidth] = useState(0)
-  const [depth, setDepth] = useState(0)
+  const [height, setHeight] = useState(4);
+  const [width, setWidth] = useState(0);
+  const [depth, setDepth] = useState(0);
   return (
     <>
-    <main>
+      <main>
         <h1 tw='bg-gray-100 rounded-x1["0.75rem"] p-8'>Cubes</h1>
       </main>
       <div css={[tw`flex-auto`]}>
@@ -180,6 +184,9 @@ const Cubes = () => {
                   name={`cube-${ele.id}`}
                   color={ele.color}
                   position={new Vector3(ele.x, ele.y, ele.z)}
+                  height={store.height}
+                  width={store.width}
+                  depth={store.depth}
                 />
               );
             })}
@@ -201,7 +208,9 @@ const Cubes = () => {
               type="number"
               placeholder="Height"
               value={height}
-              onChange={(e)=>{setHeight(e.target.valueAsNumber)}}
+              onChange={(e) => {
+                setHeight(e.target.valueAsNumber);
+              }}
             />
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -215,7 +224,9 @@ const Cubes = () => {
               type="number"
               placeholder="Width"
               value={width}
-              onChange={(e)=>{setWidth(e.target.valueAsNumber)}}
+              onChange={(e) => {
+                setWidth(e.target.valueAsNumber);
+              }}
             />
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -229,11 +240,24 @@ const Cubes = () => {
               type="number"
               placeholder="Depth"
               value={depth}
-              onChange={(e)=>{setDepth(e.target.valueAsNumber)}}
+              onChange={(e) => {
+                setDepth(e.target.valueAsNumber);
+              }}
             />
           </div>
+          <button
+              type="submit"
+              className="border-2 border-green-400 bg-white text-green-500 rounded-lg p-1 md:p-2 active:border-green-300 text-xs sm:text-lg"
+              onClick={(e)=>{
+                e.preventDefault()
+                store.changeHeight(height)}}
+            >
+              Update
+          </button>
         </form>
         <div>{height}</div>
+        <div>{width}</div>
+        <div>{depth}</div>
       </div>
     </>
   );
