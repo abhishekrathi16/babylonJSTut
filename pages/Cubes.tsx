@@ -130,11 +130,16 @@ const dimensions = [
 ];
 
 const Cubes = () => {
-  const store = useStore();
   const minZ = -((config.amount.z * config.separation) / 2);
   const [height, setHeight] = useState(4);
   const [width, setWidth] = useState(0);
   const [depth, setDepth] = useState(0);
+  const store = useStore();
+  useEffect(()=>{
+    let length = store.height
+    let width = store.width
+    let depth = store.depth
+  })
   return (
     <>
       <main>
